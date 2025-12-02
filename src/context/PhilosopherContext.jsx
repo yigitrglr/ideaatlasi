@@ -65,6 +65,35 @@ export function PhilosopherProvider({ children }) {
     return []
   })
 
+  // Favoriler - localStorage'dan yükle
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      const stored = localStorage.getItem('favorites')
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        // ID'leri kullanarak filozofları bul
+        return parsed.map(id => philosophers.find(p => p.id === id)).filter(Boolean)
+      }
+    } catch (e) {
+      console.error('Error loading favorites:', e)
+    }
+    return []
+  })
+
+  // Favorileri philosophers değiştiğinde güncelle
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('favorites')
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        const updated = parsed.map(id => philosophers.find(p => p.id === id)).filter(Boolean)
+        setFavorites(updated)
+      }
+    } catch (e) {
+      console.error('Error updating favorites:', e)
+    }
+  }, [philosophers])
+
   // Filozof görüntülendiğinde kaydet
   const addToRecentlyViewed = useCallback((philosopher) => {
     setRecentlyViewed(prev => {
@@ -75,6 +104,29 @@ export function PhilosopherProvider({ children }) {
       return updated
     })
   }, [])
+
+  // Favorilere ekle/çıkar
+  const toggleFavorite = useCallback((philosopher) => {
+    setFavorites(prev => {
+      const isFavorite = prev.some(p => p.id === philosopher.id)
+      let updated
+      if (isFavorite) {
+        // Favorilerden çıkar
+        updated = prev.filter(p => p.id !== philosopher.id)
+      } else {
+        // Favorilere ekle
+        updated = [...prev, philosopher]
+      }
+      // Sadece ID'leri kaydet
+      localStorage.setItem('favorites', JSON.stringify(updated.map(p => p.id)))
+      return updated
+    })
+  }, [])
+
+  // Filozof favori mi kontrol et
+  const isFavorite = useCallback((philosopherId) => {
+    return favorites.some(p => p.id === philosopherId)
+  }, [favorites])
 
   // Filtrelenmiş filozoflar - memoize edilmiş
   const filteredPhilosophers = useMemo(() => {
@@ -122,7 +174,10 @@ export function PhilosopherProvider({ children }) {
     minYear,
     maxYear,
     recentlyViewed,
-    addToRecentlyViewed
+    addToRecentlyViewed,
+    favorites,
+    toggleFavorite,
+    isFavorite
   }
 
   return (

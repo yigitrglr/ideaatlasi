@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search, X, Clock } from 'lucide-react'
+import { Search, X, Clock, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Select } from '@/components/ui/select'
@@ -23,7 +23,8 @@ function SearchAndFilters({ open, onOpenChange }) {
     maxYear,
     filteredPhilosophers,
     recentlyViewed,
-    setSelectedPhilosopher
+    setSelectedPhilosopher,
+    favorites
   } = usePhilosophers()
 
   const [showSuggestions, setShowSuggestions] = useState(false)
@@ -77,6 +78,32 @@ function SearchAndFilters({ open, onOpenChange }) {
               />
             )}
           </div>
+
+          {/* Favoriler */}
+          {favorites && favorites.length > 0 && (
+            <div className="mb-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <h4 className="text-sm font-medium">Favoriler</h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {favorites.map((philosopher) => (
+                  <Button
+                    key={philosopher.id}
+                    variant="outline"
+                    size="sm"
+                    className="text-xs"
+                    onClick={() => {
+                      setSelectedPhilosopher(philosopher)
+                      onOpenChange(false)
+                    }}
+                  >
+                    {philosopher.name}
+                  </Button>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Son Görüntülenenler */}
           {recentlyViewed && recentlyViewed.length > 0 && (

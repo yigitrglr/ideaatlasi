@@ -1,9 +1,15 @@
 import { memo } from 'react'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
-import { Calendar, MapPin, Book, Lightbulb, Users } from 'lucide-react'
+import { Calendar, MapPin, Book, Lightbulb, Users, Star } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { usePhilosophers } from '@/context/PhilosopherContext'
 
 const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, onOpenChange }) {
+  const { toggleFavorite, isFavorite } = usePhilosophers()
+  
   if (!philosopher) return null
+
+  const favorite = isFavorite(philosopher.id)
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange} title={philosopher.name}>
@@ -21,9 +27,26 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
             />
           </div>
           <div className="flex-1 space-y-4">
-            <div>
-              <h3 className="text-2xl font-bold">{philosopher.name}</h3>
-              <p className="text-muted-foreground italic">{philosopher.nameEn}</p>
+            <div className="flex items-start justify-between relative">
+              <div>
+                <h3 className="text-2xl font-bold">{philosopher.name}</h3>
+                <p className="text-muted-foreground italic">{philosopher.nameEn}</p>
+              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => toggleFavorite(philosopher)}
+                className="transition-all duration-200 hover:scale-110 absolute top-0 right-0 translate-x-[-8px] translate-y-[4px]"
+                aria-label={favorite ? "Favorilerden çıkar" : "Favorilere ekle"}
+              >
+                <Star
+                  className={`h-6 w-6 transition-all duration-200 ${
+                    favorite
+                      ? 'fill-yellow-400 text-yellow-400'
+                      : 'text-muted-foreground hover:text-yellow-400'
+                  }`}
+                />
+              </Button>
             </div>
             
             <div className="grid grid-cols-2 gap-4 text-sm">
