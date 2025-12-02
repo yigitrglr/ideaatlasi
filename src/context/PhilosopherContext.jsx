@@ -128,17 +128,119 @@ export function PhilosopherProvider({ children }) {
     return favorites.some(p => p.id === philosopherId)
   }, [favorites])
 
-  // Filtrelenmiş filozoflar - memoize edilmiş
+  // Arama geçmişi
+  const [searchHistory, setSearchHistory] = useState(() => {
+    try {
+      const stored = localStorage.getItem('searchHistory')
+      return stored ? JSON.parse(stored) : []
+    } catch (e) {
+      return []
+    }
+  })
+
+  // Arama geçmişine ekle (sadece manuel olarak çağrıldığında)
+  const addToSearchHistory = useCallback((query) => {
+    if (!query || query.trim() === '') return
+    setSearchHistory(prev => {
+      const filtered = prev.filter(q => q.toLowerCase() !== query.toLowerCase())
+      const updated = [query.trim(), ...filtered].slice(0, 10) // Son 10 arama
+      localStorage.setItem('searchHistory', JSON.stringify(updated))
+      return updated
+    })
+  }, [])
+
+  // Arama geçmişini güncelle (localStorage'dan)
+  useEffect(() => {
+    const loadHistory = () => {
+      try {
+        const stored = localStorage.getItem('searchHistory')
+        if (stored) {
+          const parsed = JSON.parse(stored)
+          setSearchHistory(parsed)
+        } else {
+          setSearchHistory([])
+        }
+      } catch (e) {
+        console.error('Error loading search history:', e)
+      }
+    }
+    
+    loadHistory()
+    
+    // Custom storage event'lerini dinle (aynı tab'dan gelen değişiklikler için)
+    const handleCustomStorage = (e) => {
+      if (e.key === 'searchHistory' || !e.key) {
+        loadHistory()
+      }
+    }
+    
+    window.addEventListener('storage', handleCustomStorage)
+    // Custom event için de dinle
+    window.addEventListener('searchHistoryUpdated', loadHistory)
+    
+    return () => {
+      window.removeEventListener('storage', handleCustomStorage)
+      window.removeEventListener('searchHistoryUpdated', loadHistory)
+    }
+  }, [])
+
+  // Fuzzy search helper - Levenshtein distance benzeri basit fuzzy matching
+  const fuzzyMatch = useCallback((text, query) => {
+    const lowerText = text.toLowerCase()
+    const lowerQuery = query.toLowerCase()
+    
+    // Tam eşleşme
+    if (lowerText.includes(lowerQuery)) return 1
+    
+    // Karakter bazlı eşleşme (basit fuzzy)
+    let textIndex = 0
+    for (let i = 0; i < lowerQuery.length; i++) {
+      const char = lowerQuery[i]
+      const foundIndex = lowerText.indexOf(char, textIndex)
+      if (foundIndex === -1) return 0
+      textIndex = foundIndex + 1
+    }
+    return 0.5 // Kısmi eşleşme
+  }, [])
+
+  // Filtrelenmiş filozoflar - memoize edilmiş (gelişmiş arama ile)
   const filteredPhilosophers = useMemo(() => {
     const lowerSearchQuery = searchQuery.toLowerCase()
     
     return philosophers.filter(philosopher => {
-      // Arama sorgusu
-      const matchesSearch = searchQuery === '' || 
-        philosopher.name.toLowerCase().includes(lowerSearchQuery) ||
-        philosopher.nameEn.toLowerCase().includes(lowerSearchQuery) ||
-        philosopher.birthCity.toLowerCase().includes(lowerSearchQuery) ||
-        philosopher.school.toLowerCase().includes(lowerSearchQuery)
+      // Gelişmiş arama - tam metin arama (eserler, fikirler dahil)
+      let matchesSearch = searchQuery === ''
+      
+      if (searchQuery !== '') {
+        // İsim araması
+        const nameMatch = philosopher.name.toLowerCase().includes(lowerSearchQuery) ||
+          philosopher.nameEn.toLowerCase().includes(lowerSearchQuery)
+        
+        // Şehir ve okul araması
+        const locationMatch = philosopher.birthCity.toLowerCase().includes(lowerSearchQuery) ||
+          philosopher.school.toLowerCase().includes(lowerSearchQuery)
+        
+        // Eserler araması
+        const worksMatch = philosopher.works?.some(work =>
+          work.title.toLowerCase().includes(lowerSearchQuery) ||
+          (work.description && work.description.toLowerCase().includes(lowerSearchQuery))
+        ) || false
+        
+        // Fikirler araması
+        const ideasMatch = philosopher.keyIdeas?.some(idea =>
+          idea.toLowerCase().includes(lowerSearchQuery)
+        ) || false
+        
+        // Biyografi araması
+        const bioMatch = philosopher.biography?.toLowerCase().includes(lowerSearchQuery) || false
+        
+        // Fuzzy search (eğer tam eşleşme yoksa)
+        const fuzzyNameMatch = !nameMatch && fuzzyMatch(philosopher.name, searchQuery) > 0
+        const fuzzyNameEnMatch = !nameMatch && fuzzyMatch(philosopher.nameEn, searchQuery) > 0
+        
+        matchesSearch = nameMatch || locationMatch || worksMatch || ideasMatch || bioMatch || 
+          fuzzyNameMatch || fuzzyNameEnMatch
+      }
 
       // Dönem filtresi
       const matchesPeriod = filters.period === 'all' || philosopher.period === filters.period
@@ -155,7 +257,7 @@ export function PhilosopherProvider({ children }) {
 
       return matchesSearch && matchesPeriod && matchesSchool && matchesCity && matchesTimeRange
     })
-  }, [philosophers, searchQuery, filters, timeRange])
+  }, [philosophers, searchQuery, filters, timeRange, fuzzyMatch])
 
   const value = {
     philosophers,
@@ -177,7 +279,9 @@ export function PhilosopherProvider({ children }) {
     addToRecentlyViewed,
     favorites,
     toggleFavorite,
-    isFavorite
+    isFavorite,
+    searchHistory,
+    addToSearchHistory
   }
 
   return (

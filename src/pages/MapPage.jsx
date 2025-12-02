@@ -9,7 +9,10 @@ import { useTheme } from '@/context/ThemeContext'
 import PhilosopherDetail from '@/components/PhilosopherDetail'
 import SearchAndFilters from '@/components/SearchAndFilters'
 import 'leaflet/dist/leaflet.css'
+import 'leaflet.markercluster/dist/MarkerCluster.css'
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 import L from 'leaflet'
+import MarkerClusterGroup from 'react-leaflet-cluster'
 
 // Leaflet marker icon sorununu düzelt
 delete L.Icon.Default.prototype._getIconUrl
@@ -253,21 +256,34 @@ function MapPage() {
           url={tileUrl}
         />
         
-        {filteredPhilosophers.map((philosopher) => (
-          <Marker
-            key={philosopher.id}
-            position={[philosopher.lat, philosopher.lng]}
-            icon={markerIcons[philosopher.id]}
-            zIndexOffset={1000}
-            eventHandlers={{
-              click: (e) => {
-                e.originalEvent.stopPropagation()
-                handleMarkerClick(philosopher)
-              }
-            }}
-          >
+        <MarkerClusterGroup
+          chunkedLoading
+          maxClusterRadius={50}
+        >
+          {filteredPhilosophers.map((philosopher) => (
+            <Marker
+              key={philosopher.id}
+              position={[philosopher.lat, philosopher.lng]}
+              icon={markerIcons[philosopher.id]}
+              zIndexOffset={1000}
+              eventHandlers={{
+                click: (e) => {
+                  e.originalEvent.stopPropagation()
+                  handleMarkerClick(philosopher)
+                }
+              }}
+            >
             <Popup className="animate-slide-up">
               <div className="p-2 min-w-[200px]">
+                <img
+                  src={philosopher.photo}
+                  alt={philosopher.name}
+                  className="w-16 h-16 object-cover rounded mb-2"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.target.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(philosopher.name)}&backgroundColor=b6e3f4`
+                  }}
+                />
                 <h3 className="font-bold text-lg mb-1 animate-fade-in">{philosopher.name}</h3>
                 <p className="text-sm text-muted-foreground mb-2">{philosopher.birthCity}</p>
                 <p className="text-xs text-muted-foreground mb-2">
@@ -284,8 +300,9 @@ function MapPage() {
                 </Button>
               </div>
             </Popup>
-          </Marker>
-        ))}
+            </Marker>
+          ))}
+        </MarkerClusterGroup>
       </MapContainer>
 
       {/* Filozof Detay Modal */}

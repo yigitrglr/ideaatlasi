@@ -21,6 +21,7 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
               src={philosopher.photo}
               alt={philosopher.name}
               className="w-48 h-48 object-cover rounded-lg border"
+              loading="lazy"
               onError={(e) => {
                 e.target.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(philosopher.name)}&backgroundColor=b6e3f4`
               }}

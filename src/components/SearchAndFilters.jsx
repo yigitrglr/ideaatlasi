@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search, X, Clock, Star } from 'lucide-react'
+import { Search, X, Clock, Star, History } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Select } from '@/components/ui/select'
@@ -24,10 +24,35 @@ function SearchAndFilters({ open, onOpenChange }) {
     filteredPhilosophers,
     recentlyViewed,
     setSelectedPhilosopher,
-    favorites
+    favorites,
+    searchHistory,
+    addToSearchHistory
   } = usePhilosophers()
 
   const [showSuggestions, setShowSuggestions] = useState(false)
+  const [showHistory, setShowHistory] = useState(false)
+
+  // Arama yapıldığında geçmişe ekle (sadece Enter veya filtreleme sonrası)
+  const handleSearchSubmit = (query) => {
+    if (query && query.trim() !== '') {
+      addToSearchHistory(query.trim())
+    }
+  }
+
+  // Enter tuşu ile arama
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && searchQuery.trim() !== '') {
+      handleSearchSubmit(searchQuery)
+      setShowSuggestions(false)
+      setShowHistory(false)
+    }
+  }
+
+  // Arama geçmişini temizle
+  const clearSearchHistory = () => {
+    localStorage.setItem('searchHistory', JSON.stringify([]))
+    window.location.reload() // Context'i güncellemek için
+  }
 
   const handleSuggestionSelect = (suggestion) => {
     if (suggestion.id) {
@@ -60,22 +85,95 @@ function SearchAndFilters({ open, onOpenChange }) {
           {/* Arama */}
           <div className="relative mb-4">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground z-10" />
+            {searchQuery && (
+              <button
+                onClick={() => {
+                  setSearchQuery('')
+                  setShowSuggestions(false)
+                  setShowHistory(true)
+                }}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground hover:text-foreground z-10"
+                aria-label="Aramayı temizle"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
             <Input
-              placeholder="Filozof, şehir veya okul ara..."
+              placeholder="Filozof, eser, fikir veya şehir ara..."
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value)
                 setShowSuggestions(true)
+                setShowHistory(false)
               }}
-              onFocus={() => setShowSuggestions(true)}
-              onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-              className="pl-10"
+              onKeyDown={handleKeyDown}
+              onFocus={() => {
+                if (searchQuery === '') {
+                  setShowHistory(true)
+                } else {
+                  setShowSuggestions(true)
+                }
+              }}
+              onBlur={() => setTimeout(() => {
+                setShowSuggestions(false)
+                setShowHistory(false)
+              }, 200)}
+              className={searchQuery ? "pl-10 pr-10" : "pl-10"}
             />
-            {showSuggestions && (
+            {showSuggestions && searchQuery && (
               <SearchSuggestions
                 searchQuery={searchQuery}
                 onSelect={handleSuggestionSelect}
               />
+            )}
+            {showHistory && searchQuery === '' && searchHistory.length > 0 && (
+              <div className="absolute top-full left-0 right-0 mt-1 bg-background border border-border rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+                <div className="p-2 border-b flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <History className="h-4 w-4" />
+                    <span>Arama Geçmişi</span>
+                  </div>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      clearSearchHistory()
+                    }}
+                    className="text-muted-foreground hover:text-foreground p-1"
+                    aria-label="Arama geçmişini temizle"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </div>
+                {searchHistory.map((historyItem, index) => (
+                  <div key={index} className="flex items-center group">
+                    <Button
+                      variant="ghost"
+                      className="flex-1 justify-start text-left h-auto py-2 px-3"
+                      onClick={() => {
+                        setSearchQuery(historyItem)
+                        handleSearchSubmit(historyItem)
+                        setShowHistory(false)
+                        setShowSuggestions(true)
+                      }}
+                    >
+                      {historyItem}
+                    </Button>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        // Tek bir öğeyi sil
+                        const updated = searchHistory.filter((_, i) => i !== index)
+                        localStorage.setItem('searchHistory', JSON.stringify(updated))
+                        window.dispatchEvent(new Event('searchHistoryUpdated'))
+                      }}
+                      className="opacity-0 group-hover:opacity-100 p-2 text-muted-foreground hover:text-foreground transition-opacity"
+                      aria-label="Bu öğeyi sil"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
 
