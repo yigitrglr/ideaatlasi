@@ -21,7 +21,7 @@ function AboutPage() {
         
         <div className="space-y-4 text-foreground">
           <p>
-            İdea Atlası, Orta Çağ&apos;a kadar yaşamış filozofların hayatlarını, 
+            İdea Atlası, filozofların hayatlarını, 
             eserlerini ve düşüncelerini interaktif bir harita üzerinden keşfetmenizi 
             sağlayan bir platformdur.
           </p>

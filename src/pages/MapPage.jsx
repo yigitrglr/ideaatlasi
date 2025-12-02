@@ -25,6 +25,12 @@ const periodColors = {
   'Helenistik Dönem': '#8b5cf6', // Purple
   'Geç Antik Çağ': '#ec4899', // Pink
   'Orta Çağ': '#f59e0b', // Amber
+  'Rönesans': '#10b981', // Emerald
+  'Modern Felsefe': '#ef4444', // Red
+  'Aydınlanma': '#f59e0b', // Amber
+  'Alman İdealizmi': '#6366f1', // Indigo
+  '19. Yüzyıl Felsefesi': '#14b8a6', // Teal
+  '20. Yüzyıl Felsefesi': '#8b5cf6', // Purple
 }
 
 // Özel marker icon oluştur

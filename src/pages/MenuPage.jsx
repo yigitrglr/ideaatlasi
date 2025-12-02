@@ -13,7 +13,7 @@ function MenuPage() {
             İdea Atlası
           </h1>
           <p className="text-xl text-muted-foreground max-w-md mx-auto">
-            Orta Çağ&apos;a kadar yaşamış filozofların dünyasını keşfedin
+            Filozofların dünyasını keşfedin
           </p>
         </div>
 

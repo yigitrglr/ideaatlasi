@@ -437,6 +437,986 @@
     ],
     "influences": ["Thales", "Anaksimandros"],
     "influenced": ["Platon", "Eukleides", "Modern matematik"]
+  },
+  {
+    "id": 15,
+    "name": "Demokritos",
+    "nameEn": "Democritus",
+    "birthYear": -460,
+    "deathYear": -370,
+    "birthCity": "Abdera",
+    "lat": 40.9333,
+    "lng": 24.9833,
+    "period": "Antik Yunan",
+    "school": "Atomculuk",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Democritus_by_Agostino_Carracci.jpg",
+    "biography": "Demokritos, Antik Yunan filozofu ve atomculuk okulunun kurucusudur. Abdera'da doğmuştur. Evrenin atomlardan oluştuğunu ve boşlukta hareket ettiklerini savunmuştur. 'Gülen Filozof' olarak da bilinir.",
+    "works": [
+      {
+        "title": "Doğa Üzerine",
+        "description": "Atomculuk teorisi üzerine eserler"
+      }
+    ],
+    "keyIdeas": [
+      "Atomculuk",
+      "Mekanik determinizm",
+      "Materyalizm",
+      "Boşluk ve atomlar"
+    ],
+    "influences": ["Leukippos", "Anaksagoras"],
+    "influenced": ["Epikuros", "Lucretius", "Modern bilim"]
+  },
+  {
+    "id": 16,
+    "name": "Pyrrhon",
+    "nameEn": "Pyrrho",
+    "birthYear": -360,
+    "deathYear": -270,
+    "birthCity": "Elis",
+    "lat": 37.8944,
+    "lng": 21.3731,
+    "period": "Helenistik Dönem",
+    "school": "Pironculuk (Şüphecilik)",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Pyrrho_of_Elis.jpg",
+    "biography": "Pyrrhon, Helenistik dönem filozofu ve şüpheciliğin (Pironculuk) kurucusudur. Elis'te doğmuştur. Her türlü bilgiye şüpheyle yaklaşmış ve epoché (yargıyı askıya alma) kavramını geliştirmiştir.",
+    "works": [
+      {
+        "title": "Şüphecilik Öğretileri",
+        "description": "Öğretileri öğrencisi Timon tarafından aktarılmıştır"
+      }
+    ],
+    "keyIdeas": [
+      "Epoché (yargıyı askıya alma)",
+      "Ataraxia (ruh huzuru)",
+      "Radikal şüphecilik",
+      "Bilgi imkansızlığı"
+    ],
+    "influences": ["Demokritos", "Anaksarkhos"],
+    "influenced": ["Sextus Empiricus", "Modern şüphecilik"]
+  },
+  {
+    "id": 17,
+    "name": "Abelardus",
+    "nameEn": "Peter Abelard",
+    "birthYear": 1079,
+    "deathYear": 1142,
+    "birthCity": "Le Pallet",
+    "lat": 47.1333,
+    "lng": -1.3333,
+    "period": "Orta Çağ",
+    "school": "Skolastik Felsefe",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Peter_Abelard.jpg",
+    "biography": "Abelardus, Orta Çağ filozofu, teolog ve mantıkçıdır. Fransa'da doğmuştur. Skolastik felsefenin önemli temsilcilerindendir. Heloise ile olan aşk mektuplarıyla da tanınır.",
+    "works": [
+      {
+        "title": "Sic et Non",
+        "description": "Çelişkili görünen teolojik önermeleri inceleyen eser"
+      },
+      {
+        "title": "Historia Calamitatum",
+        "description": "Otobiyografik eser"
+      }
+    ],
+    "keyIdeas": [
+      "Kavramsalcılık (Konseptualizm)",
+      "Diyalektik yöntem",
+      "Ahlak felsefesi",
+      "İrade ve niyet"
+    ],
+    "influences": ["Boethius", "Augustinus"],
+    "influenced": ["Aquinalı Thomas", "Ockhamlı William"]
+  },
+  {
+    "id": 18,
+    "name": "Farabi",
+    "nameEn": "Al-Farabi",
+    "birthYear": 872,
+    "deathYear": 950,
+    "birthCity": "Farab",
+    "lat": 42.8833,
+    "lng": 70.9500,
+    "period": "Orta Çağ",
+    "school": "İslam Felsefesi",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Al-Farabi.jpg",
+    "biography": "Farabi, İslam felsefesinin önemli temsilcilerinden biridir. Orta Asya'da doğmuş, Bağdat'ta yaşamıştır. Platon ve Aristoteles'in eserlerini yorumlamıştır. 'İkinci Öğretmen' (Muallim-i Sani) olarak anılır.",
+    "works": [
+      {
+        "title": "Erdemli Şehir",
+        "description": "Siyaset felsefesi ve ideal devlet üzerine"
+      },
+      {
+        "title": "Mantık Üzerine",
+        "description": "Aristoteles mantığının yorumu"
+      }
+    ],
+    "keyIdeas": [
+      "Erdemli şehir",
+      "Akıl ve vahiy uyumu",
+      "Mantık ve bilim",
+      "Müzik felsefesi"
+    ],
+    "influences": ["Platon", "Aristoteles", "Plotinos"],
+    "influenced": ["İbn Sina", "İbn Rüşd", "Aquinalı Thomas"]
+  },
+  {
+    "id": 19,
+    "name": "İbn-i Haldun",
+    "nameEn": "Ibn Khaldun",
+    "birthYear": 1332,
+    "deathYear": 1406,
+    "birthCity": "Tunus",
+    "lat": 36.8065,
+    "lng": 10.1815,
+    "period": "Orta Çağ",
+    "school": "İslam Felsefesi",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ibn_Khaldun.jpg",
+    "biography": "İbn-i Haldun, tarihçi, sosyolog ve filozoftur. Tunus'ta doğmuştur. Tarih felsefesi ve sosyolojinin kurucusu kabul edilir. 'Mukaddime' adlı eseriyle tanınır.",
+    "works": [
+      {
+        "title": "Mukaddime",
+        "description": "Tarih felsefesi ve sosyoloji üzerine giriş eseri"
+      },
+      {
+        "title": "Kitabü'l-İber",
+        "description": "Evrensel tarih eseri"
+      }
+    ],
+    "keyIdeas": [
+      "Asabiyet (toplumsal dayanışma)",
+      "Tarih felsefesi",
+      "Sosyoloji",
+      "Uygarlık döngüsü"
+    ],
+    "influences": ["Farabi", "İbn Sina", "Aristoteles"],
+    "influenced": ["Modern sosyoloji", "Tarih felsefesi"]
+  },
+  {
+    "id": 20,
+    "name": "İbn-i Sina",
+    "nameEn": "Avicenna",
+    "birthYear": 980,
+    "deathYear": 1037,
+    "birthCity": "Afşana",
+    "lat": 39.6333,
+    "lng": 64.3833,
+    "period": "Orta Çağ",
+    "school": "İslam Felsefesi",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Avicenna_Portrait_on_Silver_Vase_-_Museum_at_BuAli_Sina_%28Avicenna%29_Mausoleum_-_Hamadan_-_Western_Iran_%282014%29.jpg",
+    "biography": "İbn-i Sina, İslam felsefesinin en önemli temsilcilerinden biridir. Orta Asya'da doğmuştur. Tıp, felsefe ve bilim alanlarında eserler vermiştir. 'El-Kanun fi't-Tıb' adlı tıp eseri yüzyıllarca ders kitabı olarak kullanılmıştır.",
+    "works": [
+      {
+        "title": "Kitabü'ş-Şifa",
+        "description": "Felsefe ansiklopedisi"
+      },
+      {
+        "title": "El-Kanun fi't-Tıb",
+        "description": "Tıp ansiklopedisi"
+      },
+      {
+        "title": "En-Necat",
+        "description": "Felsefe özeti"
+      }
+    ],
+    "keyIdeas": [
+      "Varlık ve zorunluluk",
+      "Akıl teorisi",
+      "Ruh ve beden",
+      "Tıp felsefesi"
+    ],
+    "influences": ["Aristoteles", "Farabi", "Plotinos"],
+    "influenced": ["Aquinalı Thomas", "Duns Scotus", "Modern felsefe"]
+  },
+  {
+    "id": 21,
+    "name": "Bacon",
+    "nameEn": "Francis Bacon",
+    "birthYear": 1561,
+    "deathYear": 1626,
+    "birthCity": "Londra",
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "period": "Rönesans",
+    "school": "Empirizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Francis_Bacon%2C_Viscount_St_Alban_from_NPG_%281%29.jpg",
+    "biography": "Francis Bacon, İngiliz filozof, bilim insanı ve devlet adamıdır. Londra'da doğmuştur. Bilimsel yöntemin kurucusu kabul edilir. 'Bilgi güçtür' sözüyle tanınır.",
+    "works": [
+      {
+        "title": "Novum Organum",
+        "description": "Yeni bilimsel yöntem üzerine"
+      },
+      {
+        "title": "Yeni Atlantis",
+        "description": "Ütopya eseri"
+      },
+      {
+        "title": "Denemeler",
+        "description": "Ahlak ve siyaset üzerine denemeler"
+      }
+    ],
+    "keyIdeas": [
+      "Deneysel yöntem",
+      "Tümevarım",
+      "İdoller teorisi",
+      "Bilimsel devrim"
+    ],
+    "influences": ["Aristoteles", "Platon"],
+    "influenced": ["Locke", "Hume", "Modern bilim"]
+  },
+  {
+    "id": 22,
+    "name": "Giordano Bruno",
+    "nameEn": "Giordano Bruno",
+    "birthYear": 1548,
+    "deathYear": 1600,
+    "birthCity": "Nola",
+    "lat": 40.9256,
+    "lng": 14.5281,
+    "period": "Rönesans",
+    "school": "Hermetik Felsefe",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Giordano_Bruno.jpg",
+    "biography": "Giordano Bruno, İtalyan filozof, matematikçi ve gökbilimcidir. Nola'da doğmuştur. Sonsuz evren teorisini savunmuş ve Engizisyon tarafından yakılarak öldürülmüştür.",
+    "works": [
+      {
+        "title": "Sonsuz Evren ve Dünyalar Üzerine",
+        "description": "Kozmoloji ve felsefe"
+      },
+      {
+        "title": "Kahramanlık Tutkuları",
+        "description": "Etik ve estetik üzerine"
+      }
+    ],
+    "keyIdeas": [
+      "Sonsuz evren",
+      "Hermetik felsefe",
+      "Çoklu dünyalar",
+      "Bilgi ve hafıza"
+    ],
+    "influences": ["Nicolaus Cusanus", "Copernicus"],
+    "influenced": ["Spinoza", "Leibniz", "Modern kozmoloji"]
+  },
+  {
+    "id": 23,
+    "name": "Descartes",
+    "nameEn": "René Descartes",
+    "birthYear": 1596,
+    "deathYear": 1650,
+    "birthCity": "La Haye",
+    "lat": 46.6667,
+    "lng": 0.2500,
+    "period": "Modern Felsefe",
+    "school": "Rasyonalizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
+    "biography": "Descartes, Fransız filozof, matematikçi ve bilim insanıdır. Modern felsefenin kurucusu kabul edilir. 'Düşünüyorum, öyleyse varım' (Cogito ergo sum) sözüyle tanınır.",
+    "works": [
+      {
+        "title": "Metod Üzerine Konuşma",
+        "description": "Felsefi yöntem üzerine"
+      },
+      {
+        "title": "Meditasyonlar",
+        "description": "Metafizik ve epistemoloji"
+      },
+      {
+        "title": "Felsefenin İlkeleri",
+        "description": "Sistematik felsefe"
+      }
+    ],
+    "keyIdeas": [
+      "Cogito ergo sum",
+      "Dualizm (ruh-beden)",
+      "Analitik geometri",
+      "Metodik şüphe"
+    ],
+    "influences": ["Augustinus", "Aquinalı Thomas"],
+    "influenced": ["Spinoza", "Leibniz", "Kant", "Modern felsefe"]
+  },
+  {
+    "id": 24,
+    "name": "Leibniz",
+    "nameEn": "Gottfried Wilhelm Leibniz",
+    "birthYear": 1646,
+    "deathYear": 1716,
+    "birthCity": "Leipzig",
+    "lat": 51.3397,
+    "lng": 12.3731,
+    "period": "Modern Felsefe",
+    "school": "Rasyonalizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Gottfried_Wilhelm_Leibniz%2C_Bernhard_Christoph_Francke.jpg",
+    "biography": "Leibniz, Alman filozof, matematikçi ve bilim insanıdır. Leipzig'de doğmuştur. Kalkülüsün geliştiricilerinden biridir. Monad teorisi ve en iyi dünya kavramıyla tanınır.",
+    "works": [
+      {
+        "title": "Monadoloji",
+        "description": "Monad teorisi üzerine"
+      },
+      {
+        "title": "Teodise",
+        "description": "Kötülük problemi ve en iyi dünya"
+      },
+      {
+        "title": "Yeni Denemeler",
+        "description": "Locke'a karşı rasyonalist görüşler"
+      }
+    ],
+    "keyIdeas": [
+      "Monad teorisi",
+      "Önceden kurulmuş uyum",
+      "En iyi dünya",
+      "Kalkülüs"
+    ],
+    "influences": ["Descartes", "Spinoza", "Platon"],
+    "influenced": ["Kant", "Hegel", "Russell", "Modern mantık"]
+  },
+  {
+    "id": 25,
+    "name": "Spinoza",
+    "nameEn": "Baruch Spinoza",
+    "birthYear": 1632,
+    "deathYear": 1677,
+    "birthCity": "Amsterdam",
+    "lat": 52.3676,
+    "lng": 4.9041,
+    "period": "Modern Felsefe",
+    "school": "Rasyonalizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Spinoza.jpg",
+    "biography": "Spinoza, Hollandalı filozoftur. Amsterdam'da doğmuştur. Panteist görüşleri nedeniyle Yahudi cemaatinden aforoz edilmiştir. 'Etika' adlı eseriyle tanınır.",
+    "works": [
+      {
+        "title": "Etika",
+        "description": "Geometrik yöntemle yazılmış etik ve metafizik eseri"
+      },
+      {
+        "title": "Teolojik-Politik İnceleme",
+        "description": "Din ve siyaset felsefesi"
+      }
+    ],
+    "keyIdeas": [
+      "Panteizm",
+      "Determinizm",
+      "Substantia (öz)",
+      "Geometrik yöntem"
+    ],
+    "influences": ["Descartes", "Bruno", "Stoacılar"],
+    "influenced": ["Leibniz", "Goethe", "Hegel", "Nietzsche"]
+  },
+  {
+    "id": 26,
+    "name": "John Locke",
+    "nameEn": "John Locke",
+    "birthYear": 1632,
+    "deathYear": 1704,
+    "birthCity": "Wrington",
+    "lat": 51.3611,
+    "lng": -2.7639,
+    "period": "Modern Felsefe",
+    "school": "Empirizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/9/9f/John_Locke.jpg",
+    "biography": "John Locke, İngiliz filozof ve siyaset teorisyenidir. Wrington'da doğmuştur. Modern liberalizmin kurucusu kabul edilir. 'Tabula rasa' (boş levha) teorisiyle tanınır.",
+    "works": [
+      {
+        "title": "İnsan Anlığı Üzerine Bir Deneme",
+        "description": "Epistemoloji ve empirizm"
+      },
+      {
+        "title": "Hükümet Üzerine İki İnceleme",
+        "description": "Siyaset felsefesi ve liberalizm"
+      }
+    ],
+    "keyIdeas": [
+      "Tabula rasa",
+      "Doğal haklar",
+      "Toplumsal sözleşme",
+      "Hoşgörü"
+    ],
+    "influences": ["Bacon", "Descartes"],
+    "influenced": ["Hume", "Rousseau", "Kant", "Modern liberalizm"]
+  },
+  {
+    "id": 27,
+    "name": "Machiavelli",
+    "nameEn": "Niccolò Machiavelli",
+    "birthYear": 1469,
+    "deathYear": 1527,
+    "birthCity": "Floransa",
+    "lat": 43.7696,
+    "lng": 11.2558,
+    "period": "Rönesans",
+    "school": "Siyaset Felsefesi",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/9/93/Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg",
+    "biography": "Machiavelli, İtalyan siyaset teorisyeni, diplomat ve filozoftur. Floransa'da doğmuştur. Modern siyaset biliminin kurucusu kabul edilir. 'Prens' adlı eseriyle tanınır.",
+    "works": [
+      {
+        "title": "Prens",
+        "description": "Siyaset ve iktidar üzerine"
+      },
+      {
+        "title": "Söylevler",
+        "description": "Roma tarihi ve cumhuriyetçilik"
+      }
+    ],
+    "keyIdeas": [
+      "Realpolitik",
+      "Araç ve amaç",
+      "Cumhuriyetçilik",
+      "Siyaset ve ahlak ayrımı"
+    ],
+    "influences": ["Aristoteles", "Roma tarihçileri"],
+    "influenced": ["Hobbes", "Rousseau", "Modern siyaset teorisi"]
+  },
+  {
+    "id": 28,
+    "name": "Rousseau",
+    "nameEn": "Jean-Jacques Rousseau",
+    "birthYear": 1712,
+    "deathYear": 1778,
+    "birthCity": "Cenevre",
+    "lat": 46.2044,
+    "lng": 6.1432,
+    "period": "Aydınlanma",
+    "school": "Romantizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Jean-Jacques_Rousseau_%28painted_portrait%29.jpg",
+    "biography": "Rousseau, İsviçreli-Fransız filozof, yazar ve siyaset teorisyenidir. Cenevre'de doğmuştur. Romantizmin ve modern eğitim felsefesinin öncülerindendir. 'Toplum Sözleşmesi' ile tanınır.",
+    "works": [
+      {
+        "title": "Toplum Sözleşmesi",
+        "description": "Siyaset felsefesi ve demokrasi"
+      },
+      {
+        "title": "Emile",
+        "description": "Eğitim felsefesi"
+      },
+      {
+        "title": "İtiraflar",
+        "description": "Otobiyografik eser"
+      }
+    ],
+    "keyIdeas": [
+      "Genel irade",
+      "Doğa ve kültür",
+      "Eğitim felsefesi",
+      "Romantizm"
+    ],
+    "influences": ["Locke", "Platon"],
+    "influenced": ["Kant", "Hegel", "Marx", "Modern demokrasi"]
+  },
+  {
+    "id": 29,
+    "name": "Hume",
+    "nameEn": "David Hume",
+    "birthYear": 1711,
+    "deathYear": 1776,
+    "birthCity": "Edinburgh",
+    "lat": 55.9533,
+    "lng": -3.1883,
+    "period": "Aydınlanma",
+    "school": "Empirizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Allan_Ramsay_-_David_Hume%2C_1711_-_1776._Historian_and_philosopher_-_Google_Art_Project.jpg",
+    "biography": "Hume, İskoç filozof, tarihçi ve ekonomisttir. Edinburgh'da doğmuştur. Empirizmin en önemli temsilcilerinden biridir. Nedensellik ve tümevarım problemi üzerine çalışmıştır.",
+    "works": [
+      {
+        "title": "İnsan Doğası Üzerine Bir İnceleme",
+        "description": "Epistemoloji ve ahlak felsefesi"
+      },
+      {
+        "title": "İnsan Anlığı Üzerine Soruşturma",
+        "description": "Bilgi teorisi"
+      }
+    ],
+    "keyIdeas": [
+      "Nedensellik problemi",
+      "Tümevarım problemi",
+      "İzlenim ve fikir",
+      "Ahlak duygusu"
+    ],
+    "influences": ["Locke", "Berkeley"],
+    "influenced": ["Kant", "Mill", "Modern empirizm"]
+  },
+  {
+    "id": 30,
+    "name": "Kant",
+    "nameEn": "Immanuel Kant",
+    "birthYear": 1724,
+    "deathYear": 1804,
+    "birthCity": "Königsberg",
+    "lat": 54.7104,
+    "lng": 20.4522,
+    "period": "Aydınlanma",
+    "school": "Transandantal İdealizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Kant_gemaelde_3.jpg",
+    "biography": "Kant, Alman filozoftur. Königsberg'de doğmuş ve yaşamıştır. Modern felsefenin en önemli figürlerinden biridir. 'Saf Aklın Eleştirisi' ile tanınır.",
+    "works": [
+      {
+        "title": "Saf Aklın Eleştirisi",
+        "description": "Epistemoloji ve metafizik"
+      },
+      {
+        "title": "Pratik Aklın Eleştirisi",
+        "description": "Ahlak felsefesi"
+      },
+      {
+        "title": "Yargı Gücünün Eleştirisi",
+        "description": "Estetik ve teleoloji"
+      }
+    ],
+    "keyIdeas": [
+      "Transandantal idealizm",
+      "Kategorik buyruk",
+      "A priori / a posteriori",
+      "Kopernik devrimi"
+    ],
+    "influences": ["Leibniz", "Hume", "Rousseau"],
+    "influenced": ["Hegel", "Schopenhauer", "Nietzsche", "Modern felsefe"]
+  },
+  {
+    "id": 31,
+    "name": "Hegel",
+    "nameEn": "Georg Wilhelm Friedrich Hegel",
+    "birthYear": 1770,
+    "deathYear": 1831,
+    "birthCity": "Stuttgart",
+    "lat": 48.7758,
+    "lng": 9.1829,
+    "period": "Alman İdealizmi",
+    "school": "Mutlak İdealizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/0/06/Hegel_portrait_by_Schlesinger_1831.jpg",
+    "biography": "Hegel, Alman filozoftur. Stuttgart'ta doğmuştur. Alman idealizminin en önemli temsilcisidir. Diyalektik yöntem ve mutlak tin kavramıyla tanınır.",
+    "works": [
+      {
+        "title": "Tinin Fenomenolojisi",
+        "description": "Bilinç ve tin üzerine"
+      },
+      {
+        "title": "Mantık Bilimi",
+        "description": "Diyalektik mantık"
+      },
+      {
+        "title": "Hukuk Felsefesinin Ana Hatları",
+        "description": "Siyaset ve hukuk felsefesi"
+      }
+    ],
+    "keyIdeas": [
+      "Diyalektik",
+      "Mutlak tin",
+      "Tarih felsefesi",
+      "Tez-antitez-sentez"
+    ],
+    "influences": ["Kant", "Spinoza", "Herakleitos"],
+    "influenced": ["Marx", "Kierkegaard", "Nietzsche", "Modern felsefe"]
+  },
+  {
+    "id": 32,
+    "name": "Schopenhauer",
+    "nameEn": "Arthur Schopenhauer",
+    "birthYear": 1788,
+    "deathYear": 1860,
+    "birthCity": "Danzig",
+    "lat": 54.3520,
+    "lng": 18.6466,
+    "period": "Alman İdealizmi",
+    "school": "İrade Felsefesi",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Arthur_Schopenhauer_by_J_Sch%C3%A4fer%2C_1859.jpg",
+    "biography": "Schopenhauer, Alman filozoftur. Danzig'de doğmuştur. İrade felsefesi ve pesimizmle tanınır. 'İstem ve Tasarım Olarak Dünya' adlı eseriyle tanınır.",
+    "works": [
+      {
+        "title": "İstem ve Tasarım Olarak Dünya",
+        "description": "Metafizik ve irade felsefesi"
+      },
+      {
+        "title": "Aforizmalar",
+        "description": "Yaşam bilgeliği üzerine"
+      }
+    ],
+    "keyIdeas": [
+      "İrade ve tasarım",
+      "Pesimizm",
+      "Acı ve mutsuzluk",
+      "Sanat ve estetik"
+    ],
+    "influences": ["Kant", "Platon", "Budizm"],
+    "influenced": ["Nietzsche", "Wagner", "Freud"]
+  },
+  {
+    "id": 33,
+    "name": "Marx",
+    "nameEn": "Karl Marx",
+    "birthYear": 1818,
+    "deathYear": 1883,
+    "birthCity": "Trier",
+    "lat": 49.7596,
+    "lng": 6.6439,
+    "period": "19. Yüzyıl Felsefesi",
+    "school": "Marksizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Karl_Marx_001.jpg/800px-Karl_Marx_001.jpg",
+    "biography": "Marx, Alman filozof, ekonomist ve siyaset teorisyenidir. Trier'de doğmuştur. Komünizmin kurucusu kabul edilir. 'Kapital' ve 'Komünist Manifesto' ile tanınır.",
+    "works": [
+      {
+        "title": "Kapital",
+        "description": "Ekonomi ve kapitalizm analizi"
+      },
+      {
+        "title": "Komünist Manifesto",
+        "description": "Siyaset teorisi (Engels ile)"
+      },
+      {
+        "title": "Alman İdeolojisi",
+        "description": "Tarihsel materyalizm"
+      }
+    ],
+    "keyIdeas": [
+      "Tarihsel materyalizm",
+      "Sınıf mücadelesi",
+      "Artı değer",
+      "Yabancılaşma"
+    ],
+    "influences": ["Hegel", "Feuerbach", "Smith"],
+    "influenced": ["Engels", "Lenin", "Modern sosyalizm"]
+  },
+  {
+    "id": 34,
+    "name": "Proudhon",
+    "nameEn": "Pierre-Joseph Proudhon",
+    "birthYear": 1809,
+    "deathYear": 1865,
+    "birthCity": "Besançon",
+    "lat": 47.2378,
+    "lng": 6.0244,
+    "period": "19. Yüzyıl Felsefesi",
+    "school": "Anarşizm",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Proudhon.jpg",
+    "biography": "Proudhon, Fransız filozof ve siyaset teorisyenidir. Besançon'da doğmuştur. Anarşizmin kurucusu kabul edilir. 'Mülkiyet nedir?' sorusuyla tanınır.",
+    "works": [
+      {
+        "title": "Mülkiyet Nedir?",
+        "description": "Anarşizm ve mülkiyet eleştirisi"
+      },
+      {
+        "title": "Sistemin Çelişkileri",
+        "description": "Ekonomi ve toplum eleştirisi"
+      }
+    ],
+    "keyIdeas": [
+      "Anarşizm",
+      "Karşılıklılık",
+      "Mülkiyet eleştirisi",
+      "Federalizm"
+    ],
+    "influences": ["Rousseau", "Hegel"],
+    "influenced": ["Bakunin", "Kropotkin", "Modern anarşizm"]
+  },
+  {
+    "id": 35,
+    "name": "Kierkegaard",
+    "nameEn": "Søren Kierkegaard",
+    "birthYear": 1813,
+    "deathYear": 1855,
+    "birthCity": "Kopenhag",
+    "lat": 55.6761,
+    "lng": 12.5683,
+    "period": "19. Yüzyıl Felsefesi",
+    "school": "Varoluşçuluk",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/S%C3%B8ren_Kierkegaard.jpg",
+    "biography": "Kierkegaard, Danimarkalı filozof ve teologdur. Kopenhag'da doğmuştur. Varoluşçuluğun kurucusu kabul edilir. Birey, özgürlük ve iman üzerine çalışmıştır.",
+    "works": [
+      {
+        "title": "Ya/Ya da",
+        "description": "Estetik ve etik yaşam"
+      },
+      {
+        "title": "Korku ve Titreme",
+        "description": "İman ve varoluş"
+      },
+      {
+        "title": "Felsefi Parçalar",
+        "description": "Hıristiyanlık ve felsefe"
+      }
+    ],
+    "keyIdeas": [
+      "Varoluşçuluk",
+      "Birey ve toplum",
+      "Kaygı (angst)",
+      "İman sıçraması"
+    ],
+    "influences": ["Sokrates", "Hegel"],
+    "influenced": ["Nietzsche", "Sartre", "Heidegger", "Modern varoluşçuluk"]
+  },
+  {
+    "id": 36,
+    "name": "Nietzsche",
+    "nameEn": "Friedrich Nietzsche",
+    "birthYear": 1844,
+    "deathYear": 1900,
+    "birthCity": "Röcken",
+    "lat": 51.2333,
+    "lng": 12.1167,
+    "period": "19. Yüzyıl Felsefesi",
+    "school": "Varoluşçuluk",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Nietzsche187a.jpg",
+    "biography": "Nietzsche, Alman filozof, filolog ve kültür eleştirmenidir. Röcken'de doğmuştur. 'Tanrı öldü' ve 'üstinsan' kavramlarıyla tanınır. Modern felsefeyi derinden etkilemiştir.",
+    "works": [
+      {
+        "title": "Böyle Buyurdu Zerdüşt",
+        "description": "Felsefi şiir ve üstinsan"
+      },
+      {
+        "title": "İyinin ve Kötünün Ötesinde",
+        "description": "Ahlak eleştirisi"
+      },
+      {
+        "title": "Güç İstenci",
+        "description": "Güç ve değer felsefesi"
+      }
+    ],
+    "keyIdeas": [
+      "Üstinsan",
+      "Güç istenci",
+      "Ebedi dönüş",
+      "Ahlak eleştirisi"
+    ],
+    "influences": ["Schopenhauer", "Herakleitos", "Wagner"],
+    "influenced": ["Heidegger", "Sartre", "Foucault", "Modern felsefe"]
+  },
+  {
+    "id": 37,
+    "name": "John Stuart Mill",
+    "nameEn": "John Stuart Mill",
+    "birthYear": 1806,
+    "deathYear": 1873,
+    "birthCity": "Londra",
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "period": "19. Yüzyıl Felsefesi",
+    "school": "Faydacılık",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7e/John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg",
+    "biography": "John Stuart Mill, İngiliz filozof ve ekonomisttir. Londra'da doğmuştur. Faydacılığın önemli temsilcisidir. Özgürlük ve demokrasi üzerine çalışmıştır.",
+    "works": [
+      {
+        "title": "Özgürlük Üzerine",
+        "description": "Siyaset ve özgürlük felsefesi"
+      },
+      {
+        "title": "Faydacılık",
+        "description": "Etik ve faydacılık"
+      },
+      {
+        "title": "Kadınların Köleleştirilmesi",
+        "description": "Feminizm ve eşitlik"
+      }
+    ],
+    "keyIdeas": [
+      "Faydacılık",
+      "Özgürlük",
+      "Demokrasi",
+      "Kadın hakları"
+    ],
+    "influences": ["Bentham", "Hume", "Locke"],
+    "influenced": ["Modern liberalizm", "Feminizm"]
+  },
+  {
+    "id": 38,
+    "name": "Husserl",
+    "nameEn": "Edmund Husserl",
+    "birthYear": 1859,
+    "deathYear": 1938,
+    "birthCity": "Prostějov",
+    "lat": 49.4719,
+    "lng": 17.1119,
+    "period": "20. Yüzyıl Felsefesi",
+    "school": "Fenomenoloji",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Edmund_Husserl_1910s.jpg",
+    "biography": "Husserl, Alman-Avusturyalı filozoftur. Moravya'da doğmuştur. Fenomenolojinin kurucusu kabul edilir. Bilinç ve deneyim üzerine çalışmıştır.",
+    "works": [
+      {
+        "title": "Mantık Araştırmaları",
+        "description": "Fenomenoloji ve mantık"
+      },
+      {
+        "title": "Fenomenoloji Üzerine Dersler",
+        "description": "Fenomenolojik yöntem"
+      },
+      {
+        "title": "Kriz",
+        "description": "Avrupa bilimlerinin krizi"
+      }
+    ],
+    "keyIdeas": [
+      "Fenomenoloji",
+      "Epoche (paranteze alma)",
+      "Öz görü",
+      "Yaşam dünyası"
+    ],
+    "influences": ["Brentano", "Descartes", "Kant"],
+    "influenced": ["Heidegger", "Sartre", "Merleau-Ponty", "Modern fenomenoloji"]
+  },
+  {
+    "id": 39,
+    "name": "Bergson",
+    "nameEn": "Henri Bergson",
+    "birthYear": 1859,
+    "deathYear": 1941,
+    "birthCity": "Paris",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "period": "20. Yüzyıl Felsefesi",
+    "school": "Yaşam Felsefesi",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Henri_Bergson_01.jpg",
+    "biography": "Bergson, Fransız filozoftur. Paris'te doğmuştur. Yaşam felsefesi ve sezgicilikle tanınır. Zaman ve yaratıcı evrim üzerine çalışmıştır.",
+    "works": [
+      {
+        "title": "Yaratıcı Evrim",
+        "description": "Evrim ve yaşam felsefesi"
+      },
+      {
+        "title": "Maddi ve Bellek",
+        "description": "Bellek ve zaman"
+      },
+      {
+        "title": "İki Kaynak",
+        "description": "Din ve ahlak"
+      }
+    ],
+    "keyIdeas": [
+      "Yaratıcı evrim",
+      "Süre (durée)",
+      "Sezgicilik",
+      "Yaşam atılımı"
+    ],
+    "influences": ["Kant", "Spencer"],
+    "influenced": ["Deleuze", "Merleau-Ponty", "Modern felsefe"]
+  },
+  {
+    "id": 40,
+    "name": "Heidegger",
+    "nameEn": "Martin Heidegger",
+    "birthYear": 1889,
+    "deathYear": 1976,
+    "birthCity": "Meßkirch",
+    "lat": 47.9917,
+    "lng": 9.1139,
+    "period": "20. Yüzyıl Felsefesi",
+    "school": "Varoluşçuluk",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Heidegger_1970.jpg",
+    "biography": "Heidegger, Alman filozoftur. Meßkirch'te doğmuştur. Varoluşçuluğun önemli temsilcisidir. 'Varlık ve Zaman' adlı eseriyle tanınır.",
+    "works": [
+      {
+        "title": "Varlık ve Zaman",
+        "description": "Ontoloji ve varoluş analizi"
+      },
+      {
+        "title": "Varlık Nedir?",
+        "description": "Varlık sorusu"
+      }
+    ],
+    "keyIdeas": [
+      "Dasein (orada-varlık)",
+      "Varlık sorusu",
+      "Zaman ve varlık",
+      "Teknoloji eleştirisi"
+    ],
+    "influences": ["Husserl", "Kierkegaard", "Nietzsche"],
+    "influenced": ["Sartre", "Gadamer", "Derrida", "Modern felsefe"]
+  },
+  {
+    "id": 41,
+    "name": "Wittgenstein",
+    "nameEn": "Ludwig Wittgenstein",
+    "birthYear": 1889,
+    "deathYear": 1951,
+    "birthCity": "Viyana",
+    "lat": 48.2082,
+    "lng": 16.3738,
+    "period": "20. Yüzyıl Felsefesi",
+    "school": "Analitik Felsefe",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Ludwig_Wittgenstein.jpg",
+    "biography": "Wittgenstein, Avusturyalı-İngiliz filozoftur. Viyana'da doğmuştur. Analitik felsefenin kurucularından biridir. Dil felsefesi ve mantık üzerine çalışmıştır.",
+    "works": [
+      {
+        "title": "Tractatus Logico-Philosophicus",
+        "description": "Mantık ve dil felsefesi"
+      },
+      {
+        "title": "Felsefi Soruşturmalar",
+        "description": "Dil oyunları ve anlam"
+      }
+    ],
+    "keyIdeas": [
+      "Dil oyunları",
+      "Anlam ve kullanım",
+      "Mantık ve dil",
+      "Felsefe ve terapi"
+    ],
+    "influences": ["Frege", "Russell", "Schopenhauer"],
+    "influenced": ["Analitik felsefe", "Dil felsefesi", "Modern mantık"]
+  },
+  {
+    "id": 42,
+    "name": "Sartre",
+    "nameEn": "Jean-Paul Sartre",
+    "birthYear": 1905,
+    "deathYear": 1980,
+    "birthCity": "Paris",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "period": "20. Yüzyıl Felsefesi",
+    "school": "Varoluşçuluk",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Jean_Paul_Sartre_1965.jpg",
+    "biography": "Sartre, Fransız filozof, yazar ve siyaset aktivistidir. Paris'te doğmuştur. Varoluşçuluğun önemli temsilcisidir. 'Varoluşçuluk bir hümanizmdir' sözüyle tanınır.",
+    "works": [
+      {
+        "title": "Varlık ve Hiçlik",
+        "description": "Ontoloji ve varoluşçuluk"
+      },
+      {
+        "title": "Varoluşçuluk bir Hümanizmdir",
+        "description": "Varoluşçuluk açıklaması"
+      },
+      {
+        "title": "Bulantı",
+        "description": "Varoluşçu roman"
+      }
+    ],
+    "keyIdeas": [
+      "Varoluş özden önce gelir",
+      "Özgürlük ve sorumluluk",
+      "Kötü niyet",
+      "Angst (kaygı)"
+    ],
+    "influences": ["Husserl", "Heidegger", "Kierkegaard"],
+    "influenced": ["De Beauvoir", "Camus", "Modern varoluşçuluk"]
+  },
+  {
+    "id": 43,
+    "name": "Foucault",
+    "nameEn": "Michel Foucault",
+    "birthYear": 1926,
+    "deathYear": 1984,
+    "birthCity": "Poitiers",
+    "lat": 46.5802,
+    "lng": 0.3404,
+    "period": "20. Yüzyıl Felsefesi",
+    "school": "Postyapısalcılık",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Michel_Foucault.jpg",
+    "biography": "Foucault, Fransız filozof, tarihçi ve sosyal teorisyendir. Poitiers'de doğmuştur. Postyapısalcılığın önemli temsilcisidir. İktidar, bilgi ve özne üzerine çalışmıştır.",
+    "works": [
+      {
+        "title": "Deliliğin Tarihi",
+        "description": "Delilik ve akıl"
+      },
+      {
+        "title": "Kelimeler ve Şeyler",
+        "description": "Bilim tarihi ve epistemoloji"
+      },
+      {
+        "title": "Hapishanenin Doğuşu",
+        "description": "İktidar ve gözetim"
+      }
+    ],
+    "keyIdeas": [
+      "İktidar ve bilgi",
+      "Söylem analizi",
+      "Özneleştirme",
+      "Biyoiktidar"
+    ],
+    "influences": ["Nietzsche", "Heidegger", "Marx"],
+    "influenced": ["Postyapısalcılık", "Queer teori", "Modern sosyal teori"]
   }
 ]
 
