@@ -10,7 +10,7 @@
     "lng": 23.7348,
     "period": "Antik Yunan",
     "school": "Sokratik Okul",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Socrates&backgroundColor=b6e3f4",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Socrate_du_Louvre.jpg",
     "biography": "Sokrates, Antik Yunan filozofu ve Batı felsefesinin kurucularından biridir. Atina'da doğmuş ve yaşamıştır. En önemli özelliği, hiçbir yazılı eser bırakmamış olmasıdır. Öğretileri öğrencileri Platon ve Ksenofon aracılığıyla günümüze ulaşmıştır. 'Bildiğim tek şey, hiçbir şey bilmediğimdir' sözüyle tanınır.",
     "works": [
       {
@@ -37,7 +37,7 @@
     "lng": 23.7348,
     "period": "Antik Yunan",
     "school": "Akademi",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Plato&backgroundColor=c7d2fe",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png",
     "biography": "Platon, Antik Yunan filozofu, matematikçi ve Sokrates'in öğrencisidir. Atina'da Akademi'yi kurmuştur. En ünlü eseri 'Devlet'tir. İdealar kuramı ve mağara alegorisi ile tanınır. Aristoteles'in hocasıdır.",
     "works": [
       {
@@ -77,7 +77,7 @@
     "lng": 22.2014,
     "period": "Antik Yunan",
     "school": "Lykeion",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aristotle&backgroundColor=ffd5dc",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg",
     "biography": "Aristoteles, Antik Yunan filozofu ve bilim insanıdır. Platon'un öğrencisi ve Büyük İskender'in hocasıdır. Atina'da Lykeion'u kurmuştur. Mantık, metafizik, etik, siyaset, biyoloji ve daha birçok alanda eserler vermiştir.",
     "works": [
       {
@@ -117,7 +117,7 @@
     "lng": 26.9778,
     "period": "Helenistik Dönem",
     "school": "Epikürosçuluk",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Epicurus&backgroundColor=ffeaa7",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/88/Epikouros_BM_1843.jpg",
     "biography": "Epikuros, Helenistik dönem filozofu ve Epikürosçuluk okulunun kurucusudur. Atina'da 'Bahçe' adlı okulunu kurmuştur. Hazcılık ve atomculuk görüşleriyle tanınır. 'Acıdan kaçınma ve hazza ulaşma' felsefesini savunmuştur.",
     "works": [
       {
@@ -149,7 +149,7 @@
     "lng": 33.6167,
     "period": "Helenistik Dönem",
     "school": "Stoacılık",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Zeno&backgroundColor=dda15e",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Paolo_Monti_-_Servizio_fotografico_%28Napoli%2C_1969%29_-_BEIC_6353768.jpg",
     "biography": "Zenon, Stoacılık okulunun kurucusudur. Kıbrıs'ta doğmuş, Atina'da felsefe yapmıştır. Stoa Poikile'de (Boyalı Sütun) ders vermiştir. Doğaya uygun yaşama ve erdem felsefesiyle tanınır.",
     "works": [
       {
@@ -177,7 +177,7 @@
     "lng": 31.1667,
     "period": "Geç Antik Çağ",
     "school": "Yeni Platonculuk",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Plotinus&backgroundColor=f4a261",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Plotinos.jpg",
     "biography": "Plotinos, Yeni Platonculuk okulunun kurucusudur. Mısır'da doğmuş, Roma'da öğretmenlik yapmıştır. Platon'un felsefesini geliştirerek mistik bir sistem kurmuştur. 'Bir'den (The One) çıkış (emanation) kuramıyla tanınır.",
     "works": [
       {
@@ -205,7 +205,7 @@
     "lng": 7.4000,
     "period": "Geç Antik Çağ",
     "school": "Hıristiyan Felsefesi",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Augustine&backgroundColor=e76f51",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg",
     "biography": "Augustinus, Hıristiyan teolog ve filozofudur. Kuzey Afrika'da doğmuş, Hippo'da piskoposluk yapmıştır. Platon ve Plotinos'tan etkilenmiştir. Hıristiyan felsefesinin temellerini atmıştır.",
     "works": [
       {
@@ -241,7 +241,7 @@
     "lng": 12.4964,
     "period": "Orta Çağ",
     "school": "Neoplatonizm",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Boethius&backgroundColor=2a9d8f",
+    "photo": "https://i0.wp.com/jamesgray2.me/wp-content/uploads/2020/02/img_2220.jpeg?resize=457%2C686&ssl=1",
     "biography": "Boethius, Geç Antik Çağ filozofu, devlet adamı ve bilim insanıdır. Roma'da doğmuş ve yaşamıştır. Aristoteles'in eserlerini Latince'ye çevirmiştir. 'Felsefenin Tesellisi' adlı eseriyle tanınır.",
     "works": [
       {
@@ -273,7 +273,7 @@
     "lng": 27.2794,
     "period": "Antik Yunan",
     "school": "Miletos Okulu",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Thales&backgroundColor=264653",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Illustrerad_Verldshistoria_band_I_Ill_107.jpg",
     "biography": "Thales, Antik Yunan filozofu, matematikçi ve astronomdur. Miletos Okulu'nun kurucusu ve Batı felsefesinin ilk filozofu kabul edilir. 'Her şeyin kaynağı sudur' önermesiyle tanınır. Güneş tutulmasını önceden tahmin ettiği söylenir.",
     "works": [
       {
@@ -301,7 +301,7 @@
     "lng": 27.3406,
     "period": "Antik Yunan",
     "school": "Efes Okulu",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Heraclitus&backgroundColor=e63946",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Heraclitus_b_4_compressed.jpg",
     "biography": "Herakleitos, Antik Yunan filozofudur. 'Değişmeyen tek şey değişimin kendisidir' sözüyle tanınır. Ateşi evrenin temel elementi olarak görür. Logos (akıl) kavramını felsefeye kazandırmıştır. Gizemli ve zor anlaşılır yazıları nedeniyle 'Karanlık Filozof' olarak anılır.",
     "works": [
       {
@@ -329,7 +329,7 @@
     "lng": 35.1500,
     "period": "Antik Yunan",
     "school": "Kynikler",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Diogenes&backgroundColor=06d6a0",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Diogenes-statue-Sinop-enhanced.jpg",
     "biography": "Diogenes, Kynik felsefe okulunun en ünlü temsilcisidir. Sinope'de doğmuş, Atina'da yaşamıştır. Bir fıçıda yaşayarak toplumsal normları reddetmiştir. 'Gölge etme başka ihsan istemem' sözüyle tanınır. Büyük İskender'e 'Güneşimden çekil' demiştir.",
     "works": [
       {
@@ -357,7 +357,7 @@
     "lng": 12.4964,
     "period": "Geç Antik Çağ",
     "school": "Stoacılık",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusAurelius&backgroundColor=118ab2",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ec/MSR-ra-61-b-1-DM.jpg",
     "biography": "Marcus Aurelius, Roma İmparatoru ve Stoacı filozoftur. 'Düşünceler' (Meditations) adlı eseri Stoacı felsefenin en önemli metinlerinden biridir. Savaş sırasında yazdığı bu eser, kişisel gelişim ve ahlak üzerine derin düşünceler içerir. 'Filozof İmparator' olarak anılır.",
     "works": [
       {
@@ -385,7 +385,7 @@
     "lng": -4.7794,
     "period": "Geç Antik Çağ",
     "school": "Stoacılık",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Seneca&backgroundColor=073b4c",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/44/Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg",
     "biography": "Seneca, Roma Stoacı filozofu, devlet adamı ve oyun yazarıdır. İspanya'da doğmuş, Roma'da yaşamıştır. Neron'un danışmanı olmuş, ancak sonunda intihar etmeye zorlanmıştır. Etik ve ahlak üzerine yazdığı mektuplar ve denemelerle tanınır.",
     "works": [
       {
@@ -421,7 +421,7 @@
     "lng": 26.9778,
     "period": "Antik Yunan",
     "school": "Pythagorasçılık",
-    "photo": "https://api.dicebear.com/7.x/avataaars/svg?seed=Pythagoras&backgroundColor=ffd166",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Pythagoras_in_the_Roman_Forum%2C_Colosseum.jpg",
     "biography": "Pythagoras, Antik Yunan filozofu, matematikçi ve mistiktir. Samos'ta doğmuş, Güney İtalya'da Kroton'da okulunu kurmuştur. Matematik, müzik ve ruh göçü teorileriyle tanınır. Ünlü 'Pisagor Teoremi' ile matematik tarihine geçmiştir.",
     "works": [
       {
