@@ -11,7 +11,7 @@ const Slider = React.forwardRef(({ className, value, onChange, min, max, step, .
       value={value}
       onChange={(e) => onChange(Number(e.target.value))}
       className={cn(
-        "w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary",
+        "w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary transition-all duration-200 hover:h-3",
         className
       )}
       ref={ref}

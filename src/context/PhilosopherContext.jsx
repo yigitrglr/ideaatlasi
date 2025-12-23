@@ -26,9 +26,15 @@ export function PhilosopherProvider({ children }) {
 
   // minYear veya maxYear değiştiğinde timeRange'i güncelle
   useEffect(() => {
-    setTimeRange({
-      start: minYear,
-      end: maxYear
+    // Use functional update to avoid dependency on timeRange
+    setTimeRange(prev => {
+      if (prev.start === minYear && prev.end === maxYear) {
+        return prev // No change needed
+      }
+      return {
+        start: minYear,
+        end: maxYear
+      }
     })
   }, [minYear, maxYear])
 
@@ -133,7 +139,7 @@ export function PhilosopherProvider({ children }) {
     try {
       const stored = localStorage.getItem('searchHistory')
       return stored ? JSON.parse(stored) : []
-    } catch (e) {
+    } catch {
       return []
     }
   })

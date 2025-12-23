@@ -15,10 +15,10 @@ const AboutPage = lazy(() => import('./pages/AboutPage'))
 // Loading component
 function LoadingFallback() {
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center">
+    <div className="min-h-screen bg-background flex items-center justify-center animate-fade-in">
       <div className="text-center space-y-4">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
-        <p className="text-muted-foreground">Yükleniyor...</p>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto transition-all duration-300"></div>
+        <p className="text-muted-foreground animate-pulse">Yükleniyor...</p>
       </div>
     </div>
   )

@@ -13,16 +13,16 @@ function SettingsPage() {
         <Button
           variant="ghost"
           onClick={() => navigate('/')}
-          className="mb-4"
+          className="mb-4 transition-all duration-200 hover:translate-x-[-4px] hover:scale-105"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" />
+          <ArrowLeft className="mr-2 h-4 w-4 transition-transform duration-200 group-hover:-translate-x-1" />
           Ana Menüye Dön
         </Button>
 
-        <h1 className="text-3xl font-bold">Ayarlar</h1>
+        <h1 className="text-3xl font-bold animate-fade-in">Ayarlar</h1>
         
         <div className="space-y-4">
-          <div className="p-4 border rounded-lg">
+          <div className="p-4 border rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.01] animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-lg font-semibold mb-1">Tema</h2>
@@ -34,16 +34,16 @@ function SettingsPage() {
                 variant="outline"
                 size="lg"
                 onClick={toggleTheme}
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-md"
               >
                 {theme === 'dark' ? (
                   <>
-                    <Sun className="h-5 w-5" />
+                    <Sun className="h-5 w-5 transition-transform duration-300 group-hover:rotate-180" />
                     <span>Açık Tema</span>
                   </>
                 ) : (
                   <>
-                    <Moon className="h-5 w-5" />
+                    <Moon className="h-5 w-5 transition-transform duration-300 group-hover:rotate-180" />
                     <span>Koyu Tema</span>
                   </>
                 )}
@@ -51,7 +51,7 @@ function SettingsPage() {
             </div>
           </div>
 
-          <div className="p-4 border rounded-lg">
+          <div className="p-4 border rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.01] animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-lg font-semibold mb-2">Dil</h2>
             <p className="text-sm text-muted-foreground">
               Dil ayarları yakında eklenecek

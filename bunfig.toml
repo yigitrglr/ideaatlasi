@@ -4,6 +4,6 @@
 auto = true
 
 [test]
-# Test configuration (if needed later)
+# Test configuration
 coverage = true
 

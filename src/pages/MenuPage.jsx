@@ -8,11 +8,11 @@ function MenuPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center">
       <div className="text-center space-y-8 p-8 animate-fade-in">
-        <div className="space-y-4">
-          <h1 className="text-6xl font-bold text-foreground mb-2">
+        <div className="space-y-4 animate-fade-in">
+          <h1 className="text-6xl font-bold text-foreground mb-2 animate-fade-in">
             İdea Atlası
           </h1>
-          <p className="text-xl text-muted-foreground max-w-md mx-auto">
+          <p className="text-xl text-muted-foreground max-w-md mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Filozofların dünyasını keşfedin
           </p>
         </div>
@@ -20,7 +20,8 @@ function MenuPage() {
         <div className="flex flex-col gap-4 max-w-sm mx-auto">
           <Button
             size="lg"
-            className="w-full h-14 text-lg transition-all duration-200 hover:scale-105 hover:shadow-lg"
+            className="w-full h-14 text-lg transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 hover:shadow-lg animate-fade-in"
+            style={{ animationDelay: '0.2s' }}
             onClick={() => navigate('/map')}
           >
             <Play className="mr-2 h-5 w-5" />
@@ -30,17 +31,19 @@ function MenuPage() {
           <Button
             variant="outline"
             size="lg"
-            className="w-full h-14 text-lg transition-all duration-200 hover:scale-105"
+            className="w-full h-14 text-lg transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 animate-fade-in"
+            style={{ animationDelay: '0.3s' }}
             onClick={() => navigate('/settings')}
           >
-            <Settings className="mr-2 h-5 w-5" />
+            <Settings className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:rotate-180" />
             Ayarlar
           </Button>
 
           <Button
             variant="outline"
             size="lg"
-            className="w-full h-14 text-lg transition-all duration-200 hover:scale-105"
+            className="w-full h-14 text-lg transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105 animate-fade-in"
+            style={{ animationDelay: '0.4s' }}
             onClick={() => navigate('/about')}
           >
             <Info className="mr-2 h-5 w-5" />

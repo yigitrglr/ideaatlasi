@@ -10,8 +10,13 @@ const Sheet = ({ open, onOpenChange, children, side = "right" }) => {
 
   useEffect(() => {
     if (open) {
-      setShouldRender(true)
-      setIsClosing(false)
+      // Use double RAF to ensure layout is complete before animation
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setShouldRender(true)
+          setIsClosing(false)
+        })
+      })
     } else if (shouldRender) {
       setIsClosing(true)
       const timer = setTimeout(() => {
@@ -57,7 +62,7 @@ const Sheet = ({ open, onOpenChange, children, side = "right" }) => {
         aria-label="Close menu"
       />
       <div className={cn(
-        "fixed z-50 w-80 bg-background shadow-lg",
+        "fixed z-50 w-80 bg-background shadow-lg transition-all duration-300",
         sideClasses[side],
         animationClass
       )}>

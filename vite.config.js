@@ -8,9 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // Base path for GitHub Pages (change to your repository name)
-  // For root domain, use: base: '/'
-  // For subdirectory, use: base: '/repository-name/'
+  // Base path for GitHub Pages
   base: process.env.GITHUB_PAGES ? '/ideatlasi/' : '/',
   plugins: [
     react(),

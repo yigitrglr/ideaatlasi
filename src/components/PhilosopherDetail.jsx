@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import PropTypes from 'prop-types'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Calendar, MapPin, Book, Lightbulb, Users, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -15,12 +16,12 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
     <Dialog open={open} onOpenChange={onOpenChange} title={philosopher.name}>
       <DialogContent className="space-y-6">
         {/* Fotoğraf ve Temel Bilgiler */}
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row gap-6 animate-fade-in">
           <div className="flex-shrink-0">
             <img
               src={philosopher.photo}
               alt={philosopher.name}
-              className="w-48 h-48 object-cover rounded-lg border"
+              className="w-48 h-48 object-cover rounded-lg border transition-transform duration-300 hover:scale-105"
               loading="lazy"
               onError={(e) => {
                 e.target.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(philosopher.name)}&backgroundColor=b6e3f4`
@@ -37,14 +38,14 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
                 variant="ghost"
                 size="icon"
                 onClick={() => toggleFavorite(philosopher)}
-                className="transition-all duration-200 hover:scale-110 absolute top-0 right-0 translate-x-[-8px] translate-y-[4px]"
+                className="transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-110 active:scale-95 absolute top-0 right-0 translate-x-[-8px] translate-y-[4px]"
                 aria-label={favorite ? "Favorilerden çıkar" : "Favorilere ekle"}
               >
                 <Star
-                  className={`h-6 w-6 transition-all duration-200 ${
+                  className={`h-6 w-6 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
                     favorite
-                      ? 'fill-yellow-400 text-yellow-400'
-                      : 'text-muted-foreground hover:text-yellow-400'
+                      ? 'fill-yellow-400 text-yellow-400 animate-bounce-in'
+                      : 'text-muted-foreground hover:text-yellow-400 hover:scale-110'
                   }`}
                 />
               </Button>
@@ -82,14 +83,18 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
 
         {/* Eserler */}
         {philosopher.works && philosopher.works.length > 0 && (
-          <div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-              <Book className="h-5 w-5" />
+              <Book className="h-5 w-5 transition-transform duration-300 hover:rotate-12" />
               Önemli Eserler
             </h4>
             <div className="space-y-2">
               {philosopher.works.map((work, index) => (
-                <div key={index} className="p-3 bg-muted rounded-lg">
+                <div 
+                  key={`work-${philosopher.id}-${index}-${work.title}`} 
+                  className="p-3 bg-muted rounded-lg transition-all duration-200 hover:bg-muted/80 hover:shadow-md animate-fade-in"
+                  style={{ animationDelay: `${0.15 + index * 0.05}s` }}
+                >
                   <p className="font-medium">{work.title}</p>
                   {work.description && (
                     <p className="text-sm text-muted-foreground mt-1">{work.description}</p>
@@ -102,16 +107,17 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
 
         {/* Temel Fikirler */}
         {philosopher.keyIdeas && philosopher.keyIdeas.length > 0 && (
-          <div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-              <Lightbulb className="h-5 w-5" />
+              <Lightbulb className="h-5 w-5 transition-transform duration-300 hover:scale-110" />
               Temel Fikirler
             </h4>
             <div className="flex flex-wrap gap-2">
               {philosopher.keyIdeas.map((idea, index) => (
                 <span
-                  key={index}
-                  className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                  key={`idea-${philosopher.id}-${index}-${idea}`}
+                  className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm transition-all duration-200 hover:bg-primary/20 hover:scale-105 animate-fade-in"
+                  style={{ animationDelay: `${0.25 + index * 0.05}s` }}
                 >
                   {idea}
                 </span>
@@ -122,9 +128,9 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
 
         {/* Etkileşimler */}
         {(philosopher.influences?.length > 0 || philosopher.influenced?.length > 0) && (
-          <div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-              <Users className="h-5 w-5" />
+              <Users className="h-5 w-5 transition-transform duration-300 hover:scale-110" />
               Felsefi Etkileşimler
             </h4>
             <div className="grid md:grid-cols-2 gap-4">
@@ -134,8 +140,9 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
                   <div className="flex flex-wrap gap-2">
                     {philosopher.influences.map((name, index) => (
                       <span
-                        key={index}
-                        className="px-2 py-1 bg-secondary rounded text-sm"
+                        key={`influence-${philosopher.id}-${index}-${name}`}
+                        className="px-2 py-1 bg-secondary rounded text-sm transition-all duration-200 hover:bg-secondary/80 hover:scale-105 animate-fade-in"
+                        style={{ animationDelay: `${0.35 + index * 0.03}s` }}
                       >
                         {name}
                       </span>
@@ -149,8 +156,9 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
                   <div className="flex flex-wrap gap-2">
                     {philosopher.influenced.map((name, index) => (
                       <span
-                        key={index}
-                        className="px-2 py-1 bg-secondary rounded text-sm"
+                        key={`influenced-${philosopher.id}-${index}-${name}`}
+                        className="px-2 py-1 bg-secondary rounded text-sm transition-all duration-200 hover:bg-secondary/80 hover:scale-105 animate-fade-in"
+                        style={{ animationDelay: `${0.4 + index * 0.03}s` }}
                       >
                         {name}
                       </span>
@@ -165,6 +173,32 @@ const PhilosopherDetail = memo(function PhilosopherDetail({ philosopher, open, o
     </Dialog>
   )
 })
+
+PhilosopherDetail.propTypes = {
+  philosopher: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    name: PropTypes.string.isRequired,
+    nameEn: PropTypes.string,
+    photo: PropTypes.string,
+    birthYear: PropTypes.number.isRequired,
+    deathYear: PropTypes.number.isRequired,
+    birthCity: PropTypes.string.isRequired,
+    period: PropTypes.string.isRequired,
+    school: PropTypes.string.isRequired,
+    biography: PropTypes.string,
+    works: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string,
+      })
+    ),
+    keyIdeas: PropTypes.arrayOf(PropTypes.string),
+    influences: PropTypes.arrayOf(PropTypes.string),
+    influenced: PropTypes.arrayOf(PropTypes.string),
+  }),
+  open: PropTypes.bool.isRequired,
+  onOpenChange: PropTypes.func.isRequired,
+}
 
 export default PhilosopherDetail
 

@@ -134,7 +134,7 @@ function MapPage() {
     return icons
   }, [filteredPhilosophers])
 
-  // Harita tile URL'i - tema bazlı
+  // Harita tile URL'si - tema bazlı
   const tileUrl = useMemo(() => {
     if (theme === 'dark') {
       // CartoDB Dark Matter - siyah harita teması
@@ -172,20 +172,21 @@ function MapPage() {
               size="icon"
               onClick={toggleSearch}
               title="Ara ve Filtrele (Ctrl+K)"
-              className={searchOpen ? 'bg-accent' : ''}
+              className={`transition-all duration-300 hover:scale-110 ${searchOpen ? 'bg-accent' : ''}`}
             >
-              <Search className="h-5 w-5" />
+              <Search className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
             </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
               title="Tema Değiştir"
+              className="transition-transform duration-300 hover:rotate-180"
             >
               {theme === 'dark' ? (
-                <Sun className="h-5 w-5" />
+                <Sun className="h-5 w-5 transition-transform duration-300" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-5 w-5 transition-transform duration-300" />
               )}
             </Button>
             <Button
@@ -193,9 +194,9 @@ function MapPage() {
               size="icon"
               onClick={toggleMenu}
               title="Menü (Ctrl+M)"
-              className={menuOpen ? 'bg-accent' : ''}
+              className={`transition-all duration-300 hover:scale-110 ${menuOpen ? 'bg-accent' : ''}`}
             >
-              <Menu className="h-5 w-5" />
+              <Menu className="h-5 w-5 transition-transform duration-300 group-hover:rotate-90" />
             </Button>
           </div>
         </div>
@@ -206,7 +207,8 @@ function MapPage() {
         <div className="space-y-2">
           <Button
             variant="ghost"
-            className="w-full justify-start"
+            className="w-full justify-start transition-all duration-200 hover:translate-x-2 hover:bg-accent animate-fade-in"
+            style={{ animationDelay: '0.1s' }}
             onClick={() => {
               navigate('/')
               setMenuOpen(false)
@@ -216,7 +218,8 @@ function MapPage() {
           </Button>
           <Button
             variant="ghost"
-            className="w-full justify-start"
+            className="w-full justify-start transition-all duration-200 hover:translate-x-2 hover:bg-accent animate-fade-in"
+            style={{ animationDelay: '0.15s' }}
             onClick={() => {
               navigate('/settings')
               setMenuOpen(false)
@@ -226,7 +229,8 @@ function MapPage() {
           </Button>
           <Button
             variant="ghost"
-            className="w-full justify-start"
+            className="w-full justify-start transition-all duration-200 hover:translate-x-2 hover:bg-accent animate-fade-in"
+            style={{ animationDelay: '0.2s' }}
             onClick={() => {
               navigate('/about')
               setMenuOpen(false)

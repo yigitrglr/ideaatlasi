@@ -84,7 +84,7 @@ function SearchAndFilters({ open, onOpenChange }) {
           
           {/* Arama */}
           <div className="relative mb-4">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground z-10" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground z-10 transition-transform duration-300 group-focus-within:scale-110" />
             {searchQuery && (
               <button
                 onClick={() => {
@@ -92,7 +92,7 @@ function SearchAndFilters({ open, onOpenChange }) {
                   setShowSuggestions(false)
                   setShowHistory(true)
                 }}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground hover:text-foreground z-10"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground hover:text-foreground z-10 transition-all duration-200 hover:scale-110 hover:rotate-90"
                 aria-label="Aramayı temizle"
               >
                 <X className="h-4 w-4" />
@@ -118,7 +118,7 @@ function SearchAndFilters({ open, onOpenChange }) {
                 setShowSuggestions(false)
                 setShowHistory(false)
               }, 200)}
-              className={searchQuery ? "pl-10 pr-10" : "pl-10"}
+              className={`group transition-all duration-200 focus:scale-[1.01] ${searchQuery ? "pl-10 pr-10" : "pl-10"}`}
             />
             {showSuggestions && searchQuery && (
               <SearchSuggestions
@@ -179,18 +179,19 @@ function SearchAndFilters({ open, onOpenChange }) {
 
           {/* Favoriler */}
           {favorites && favorites.length > 0 && (
-            <div className="mb-4">
+            <div className="mb-4 animate-fade-in">
               <div className="flex items-center gap-2 mb-2">
-                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400 transition-transform duration-300 hover:rotate-12" />
                 <h4 className="text-sm font-medium">Favoriler</h4>
               </div>
               <div className="flex flex-wrap gap-2">
-                {favorites.map((philosopher) => (
+                {favorites.map((philosopher, index) => (
                   <Button
                     key={philosopher.id}
                     variant="outline"
                     size="sm"
-                    className="text-xs"
+                    className="text-xs transition-all duration-200 hover:scale-105 hover:shadow-md animate-fade-in"
+                    style={{ animationDelay: `${index * 0.05}s` }}
                     onClick={() => {
                       setSelectedPhilosopher(philosopher)
                       onOpenChange(false)
@@ -205,18 +206,19 @@ function SearchAndFilters({ open, onOpenChange }) {
 
           {/* Son Görüntülenenler */}
           {recentlyViewed && recentlyViewed.length > 0 && (
-            <div className="mb-4">
+            <div className="mb-4 animate-fade-in">
               <div className="flex items-center gap-2 mb-2">
-                <Clock className="h-4 w-4 text-muted-foreground" />
+                <Clock className="h-4 w-4 text-muted-foreground transition-transform duration-300 hover:rotate-12" />
                 <h4 className="text-sm font-medium">Son Görüntülenenler</h4>
               </div>
               <div className="flex flex-wrap gap-2">
-                {recentlyViewed.map((philosopher) => (
+                {recentlyViewed.map((philosopher, index) => (
                   <Button
                     key={philosopher.id}
                     variant="outline"
                     size="sm"
-                    className="text-xs"
+                    className="text-xs transition-all duration-200 hover:scale-105 hover:shadow-md animate-fade-in"
+                    style={{ animationDelay: `${index * 0.05}s` }}
                     onClick={() => {
                       setSelectedPhilosopher(philosopher)
                       onOpenChange(false)
