@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İdea Atlası - Felsefe Haritası</title>
+    <script>
+      // GitHub Pages SPA routing fix
+      // This file handles 404 errors and redirects to index.html
+      // GitHub Pages will serve this file when a route is not found
+      
+      const path = window.location.pathname;
+      const basePath = '/ideatlası/'; // Change this to your repository name if different
+      
+      // Get the path after the base path
+      let routePath = path;
+      if (path.startsWith(basePath)) {
+        routePath = path.slice(basePath.length - 1);
+      } else if (path.startsWith('/')) {
+        routePath = path;
+      }
+      
+      // Remove trailing slash except for root
+      if (routePath !== '/' && routePath.endsWith('/')) {
+        routePath = routePath.slice(0, -1);
+      }
+      
+      // Redirect to index.html - React Router will handle the routing
+      const redirectUrl = basePath + 'index.html' + (routePath === '/' ? '' : routePath);
+      window.location.replace(redirectUrl);
+    </script>
+  </head>
+  <body>
+    <p>Yönlendiriliyor...</p>
+  </body>
+</html>
+

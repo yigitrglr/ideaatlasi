@@ -6,7 +6,9 @@ import './index.css'
 // PWA Service Worker registration
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    // Use base path from import.meta.env.BASE_URL for GitHub Pages compatibility
+    const swPath = `${import.meta.env.BASE_URL}sw.js`
+    navigator.serviceWorker.register(swPath)
       .then((registration) => {
         console.log('SW registered: ', registration)
       })

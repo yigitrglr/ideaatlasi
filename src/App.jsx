@@ -4,6 +4,9 @@ import { PhilosopherProvider } from './context/PhilosopherContext'
 import { ThemeProvider } from './context/ThemeContext'
 import MenuPage from './pages/MenuPage'
 
+// Get base path from Vite environment
+const basePath = import.meta.env.BASE_URL
+
 // Code Splitting - Lazy loading
 const MapPage = lazy(() => import('./pages/MapPage'))
 const SettingsPage = lazy(() => import('./pages/SettingsPage'))
@@ -25,7 +28,7 @@ function App() {
   return (
     <ThemeProvider>
       <PhilosopherProvider>
-        <Router>
+        <Router basename={basePath === '/' ? undefined : basePath.slice(0, -1)}>
           <Routes>
             <Route path="/" element={<MenuPage />} />
             <Route 
