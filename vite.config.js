@@ -11,7 +11,7 @@ export default defineConfig({
   // Base path for GitHub Pages (change to your repository name)
   // For root domain, use: base: '/'
   // For subdirectory, use: base: '/repository-name/'
-  base: process.env.GITHUB_PAGES ? '/ideatlası/' : '/',
+  base: process.env.GITHUB_PAGES ? '/ideatlasi/' : '/',
   plugins: [
     react(),
     VitePWA({
