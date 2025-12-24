@@ -85,8 +85,8 @@ Filozofların hayatlarını, eserlerini ve düşüncelerini interaktif harita ü
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/yigitrglr/ideaatlasi.git
-cd ideatlası
+git clone https://github.com/yigitrglr/ideatlasi.git
+cd ideatlasi
 ```
 
 2. Bağımlılıkları yükleyin:
