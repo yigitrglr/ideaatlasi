@@ -29,7 +29,7 @@ export function PhilosopherProvider({ children }) {
     // Use functional update to avoid dependency on timeRange
     setTimeRange(prev => {
       if (prev.start === minYear && prev.end === maxYear) {
-        return prev // No change needed
+        return prev
       }
       return {
         start: minYear,

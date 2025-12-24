@@ -328,7 +328,7 @@ button, a, input, select {
   transition-duration: 150ms;
 }
 
-/* Hover efektleri - removed global button transform to allow per-button animations */
+/* Hover efektleri
 
 /* Marker popup animasyonu */
 .leaflet-popup-content-wrapper {

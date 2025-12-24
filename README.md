@@ -53,7 +53,7 @@ Filozofların hayatlarını, eserlerini ve düşüncelerini interaktif harita ü
 ## 🛠️ Teknolojiler
 
 ### Frontend
-- **React 18** - Modern UI kütüphanesi
+- **React 19** - Modern UI kütüphanesi
 - **Vite** - Hızlı build tool ve dev server
 - **React Router** - Client-side routing
 - **Tailwind CSS** - Utility-first CSS framework

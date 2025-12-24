@@ -6,11 +6,9 @@
     <title>İdea Atlası - Felsefe Haritası</title>
     <script>
       // GitHub Pages SPA routing fix
-      // This file handles 404 errors and redirects to index.html
-      // GitHub Pages will serve this file when a route is not found
       
       const path = window.location.pathname;
-      const basePath = '/ideatlası/'; // Change this to your repository name if different
+      const basePath = '/ideatlasi/';
       
       // Get the path after the base path
       let routePath = path;
@@ -25,7 +23,7 @@
         routePath = routePath.slice(0, -1);
       }
       
-      // Redirect to index.html - React Router will handle the routing
+      // Redirect to index.html
       const redirectUrl = basePath + 'index.html' + (routePath === '/' ? '' : routePath);
       window.location.replace(redirectUrl);
     </script>
