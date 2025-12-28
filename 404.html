@@ -18,7 +18,7 @@
       
       // Redirect to index.html with hash routing fallback
       if (cleanPath !== '/' && cleanPath !== '/index.html') {
-        window.location.replace(basePath + 'index.html' + cleanPath);
+        window.location.replace(basePath);
       } else {
         window.location.replace(basePath + 'index.html');
       }
