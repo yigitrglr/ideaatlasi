@@ -24,7 +24,7 @@
       }
       
       // Redirect to index.html
-      const redirectUrl = basePath;
+      const redirectUrl = basePath + 'index.html' + (routePath === '/' ? '' : routePath);
       window.location.replace(redirectUrl);
     </script>
   </head>
